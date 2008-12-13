@@ -50,7 +50,7 @@ class LinksController < DefaultController
     when "html"
       redirect_to(links_index_url)
     when "js"
-      render :partial => 
+     # render :partial => 
     end
 
   rescue DataMapper::ObjectNotFoundError
