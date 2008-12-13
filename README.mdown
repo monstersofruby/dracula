@@ -14,4 +14,5 @@ A really simple digg-like application
 
 ## Setup
 
-    sudo gem install mack haml rspec datamapper
+    sudo gem install mack haml rspec do_sqlite3 data_mapper
+
