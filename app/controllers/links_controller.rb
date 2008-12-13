@@ -41,4 +41,11 @@ class LinksController < DefaultController
     redirect_to(links_index_url)
   end
   
+  def vote
+    @link = Link.get!(params[:id])
+    @link.vote!
+  rescue DataMapper::ObjectNotFoundError
+  ensure
+    redirect_to(links_index_url)
+  end
 end
