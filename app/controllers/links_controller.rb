@@ -12,6 +12,10 @@ class LinksController < DefaultController
     @link = Link.new
   end
   
+  def show
+    @link = link.get(params[:id])
+  end
+  
   def create
     @link = Link.new(params[:link])
     if @link.save

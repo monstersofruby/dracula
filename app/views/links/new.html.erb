@@ -1,0 +1,9 @@
+<% form(links_create_url) do %>
+<%= :link.label_tag :title %>
+<%= :link.text_field :title %>
+<%= :link.label_tag :url %>
+<%= :link.text_field :url %>
+<%= :link.label_tag :description %>
+<%= :link.text_area :description, :rows => 5 %>
+<%= submit_button %>
+<% end %>
