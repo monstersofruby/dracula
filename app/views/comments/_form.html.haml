@@ -1,18 +1,15 @@
 
-= form(comments_create_url, :method => :post)
-  %div{ :style => "margin:0;padding:0" }
-  %p
-    %label{ :for => "link_title" }
-      Title
-    %input#link_title{ :name => "link[title]", :size => "30", :type => "text" }/
-  %p
-    %label{ :for => "link_url" }
-      Url
-    %input#link_url{ :name => "link[url]", :size => "30", :type => "text" }/
-  %p
-    %label{ :for => "link_description" }
-      Description
-    %textarea#link_description{ :name => "link[description]", :rows => "8", :cols => "40" }
-  %p
-    %input{ :name => "commit", :type => "submit", :value => "OK" }/
-
+%form{:action => comments_create_url(:link_id => @link), :method => :post}
+  = form_authenticity_field
+  = hidden_field :comment, :link_id
+  %div{ :class => 'commentsForm' }
+    %p
+      %label{ :for => "comment_author" }
+        Author 
+      = text_field :comment, :author
+    %p
+      %label{ :for => "comment_body" }
+        Description
+      = text_area :comment, :body, :rows => "8", :cols => "40"
+    %p
+      %input{ :name => "commit", :type => "submit", :value => "OK" }

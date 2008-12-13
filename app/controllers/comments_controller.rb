@@ -1,9 +1,11 @@
 class CommentsController < DefaultController
-  
+ 
+	before_filter :load_link
+
 	def create
-		@comment = @link.comment.build( params[:comment] )
+		@comment = @link.comments.build( params[:comment] )
 		if (@comment.save)
-			redirect_to link_show_url( :id => @link.id )
+			redirect_to links_show_url( :id => @link.id )
 		else
 			render :template => 'links/show'
 		end

@@ -13,7 +13,8 @@ class LinksController < DefaultController
   end
   
   def show
-    @link = link.get(params[:id])
+    @link = Link[params[:id]]
+	@comment = @link.comments.build
   end
   
   def create
