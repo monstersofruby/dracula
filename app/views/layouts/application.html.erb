@@ -8,11 +8,18 @@
     <%= javascript 'reg.js'%>
   </head>
   <body>
+    <div id="header">
+      <img src="/images/logo.png" />
+      <h1>Frankenstein Links — Dracula Edition™</h1>
+      <span id="navigation">
+        <a href="/">Portada</a> | <a href="/links/new">Añadir enlace</a>
+      </span>
+    </div>
     <div id="wrapper">
   <% if tell[:notice] -%>
       <div id="tell_notice"><%= tell[:notice] %></div>
   <% end -%>
-      <div><%= yield_to :view  %></div>
+<%= yield_to :view  %>
     </div>
   </body>
 </html>
