@@ -14,8 +14,28 @@ class LinksController
   end
   
   def create
-    @link = Link.create(params[:link])
+    @link = Link.new(params[:link])
+    if @link.save
+      redirect_to(links_show_url(:id => @link))
+    else
+      render(:action, "new")
+    end
   end
   
+  def update
+    @link = link.get(params[:id])
+    if @link.update_attributes(params[:link])
+      redirect_to(links_show_url(:id => @link))
+    else
+      render(:action, "edit")
+    end
+  end
+  
+  
+  def delete
+    @link = Link.get(params[:id])
+    @link.destroy
+    redirect_to(links_index_url)
+  end
   
 end
