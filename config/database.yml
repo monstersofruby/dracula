@@ -1,0 +1,63 @@
+# development:
+#   default:
+#     adapter: mysql
+#     database: dracula_development
+#     host: localhost
+#     username: root
+#     password: 
+#     
+# test:
+#   default:
+#     adapter: mysql
+#     database: dracula_test
+#     host: localhost
+#     username: root
+#     password:
+# 
+# production:
+#   default:
+#     adapter: mysql
+#     database: dracula_production
+#     host: localhost
+#     username: root
+#     password:
+
+# development:
+#   default:
+#     adapter: postgres
+#     database: dracula_development
+#     host: localhost
+#     username: root
+#     password: 
+#     
+# test:
+#   default:
+#     adapter: postgres
+#     database: dracula_test
+#     host: localhost
+#     username: root
+#     password:
+# 
+# production:
+#   default:
+#     adapter: postgres
+#     database: dracula_production
+#     host: localhost
+#     username: root
+#     password:
+
+development:
+  default:
+    adapter: sqlite3
+    database: <%= Mack::Paths.db("dracula_development.db") %>
+ 
+test:
+  default:
+    adapter: sqlite3
+    database: <%= Mack::Paths.db("dracula_test.db") %>
+ 
+production:
+  default:
+    adapter: sqlite3
+    database: <%= Mack::Paths.db("dracula_production.db") %>
+
