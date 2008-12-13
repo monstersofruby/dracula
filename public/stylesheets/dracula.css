@@ -1,0 +1,40 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  background-color: #333;
+}
+#header, #wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+#header {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  overflow: hidden;
+}
+#header img {
+  float: left;
+  margin: 10px;
+}
+#header #navigation {
+  font-size: 1.2em;
+}
+#header #navigation a {
+  font-weight: bold;
+}
+a {
+  color: #069;
+}
+h1 {
+  color: #333;
+  font-size: 2em;
+}
+.link {
+  background-color: #ccc;
+  border: 1px solid #fff;
+  -webkit-border-radius: 5px;
+  margin: 1em 0;
+}
+.link h2 {
+  color: red;
+}
