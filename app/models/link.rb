@@ -20,7 +20,8 @@ class Link
   validates_format :url, :with => /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
   
   
-  # def vote!
-  #   update_attributes(:votes => votes + 1)
-  # end
+  def vote!
+    update_attributes(:votes => votes + 1)
+  end
 end
+
