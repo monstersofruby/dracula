@@ -16,12 +16,16 @@ class Link
   has n, :comments
   
   # Validations
-  validates_present :title, :url
-  validates_format :url, :with => /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
+  #validates_present :title, :url
+  #validates_format :url, :with => /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
   
   
   def vote!
-    update_attributes(:votes => votes + 1)
+    update_attributes(:votes => (vote_count + 1))
+  end
+  
+  def vote_count
+    self.votes || 0
   end
 end
 

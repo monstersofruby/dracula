@@ -1,2 +1,18 @@
-#link_1.link
-  = render(:partial, 'links/link')
+- @links.each do |link|
+  .link
+    %span{ :id => "votes_count_#{link.id}" }
+      = link.vote_count
+    %a{ :href=> "/links/#{link.id}/vote", :id => 'vote_link_#{link.id}'}
+      Votar
+
+  .details
+    %h2
+      %a{ :href => "/links/#{link.id}" }
+        = link.title
+    %p
+      URL:
+      %a{ :href => link.url }
+        = link.url
+    %p
+      = link.description
+  
