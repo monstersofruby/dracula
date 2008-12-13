@@ -7,13 +7,9 @@
 require_gems do |gem|
   gem.add "mack-data_mapper", :libs => "mack-data_mapper"
   gem.add "mack-haml", :libs => "mack-haml"
-  
-  gem.add "dm-core"
-  
+  gem.add "ruby-debug"
   # examples:
   # gem.add :redgreen, :version => "1.2.2", :libs => :redgreen
   # gem.add :termios
   # gem.add :rubyzip, :source => "http://gems.rubyforge.org"
 end
-
-require "rubygems"
