@@ -1,2 +1,17 @@
 # Monsters of Ruby, Volume 1
 
+## What
+A really simple digg-like application
+
+
+## Tools
+- [Mack](http://www.mackframework.com/)
+- [DataMapper](http://datamapper.org/)
+- [Haml & Sass](http://haml.hamptoncatlin.com/)
+- [Reglib](http://code.google.com/p/reglib/)
+- RSpec
+
+
+## Setup
+
+    sudo gem install mack haml rspec datamapper
