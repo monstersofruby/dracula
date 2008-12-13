@@ -1,0 +1,99 @@
+body,h1,h2,h3,p,a,input,textarea {
+	font-family:"Footlight MT Light","Lucida Blackletter", Verdana;
+	font-style:italic;
+}
+
+body {
+	min-width:1080px;
+	margin:20px;
+	background-color: #000;	
+}
+
+input, textarea {
+	font-size:14px;
+}
+
+#navigation {
+	left:625px;
+	position:relative;
+	top:-50px;
+}
+
+#logo {
+	width:220px;
+	float:left;
+	background-color: #000;
+	min-height:800px;
+}
+
+#main {
+	float:left;
+	width:800px;
+	background-color:#FFF;
+	padding:0px 20px 20px;
+	background: #FFF url(/images/mor.png) no-repeat scroll bottom right;
+	padding-bottom:200px;
+}
+
+a, a:visited {
+	color:#000;
+}
+
+h1, h2 a, h2 a:visited {
+	color:#99201C !important;
+}
+
+h2,h3 {
+	margin:0px;
+}
+
+p {
+	margin:5px 0px;
+}
+
+.link {
+	margin-bottom:10px;
+}
+
+.link,.comments {
+	clear:both;
+}
+
+.votes {
+	width:51px;
+	float:left;
+	font-size:24px;
+	text-align:right;
+	padding-right:20px;
+}
+
+.details {
+	width:600px;
+	float:left;
+}
+
+.comments {
+	margin:25px 71px;
+}
+
+.new_comment {
+	margin-top:15px;
+}
+
+label {
+	display:block;
+}
+
+textarea {
+	width:500px;
+	height:150px;
+}
+
+.errorExplanation {
+	color:#99201C;
+}
+
+.fieldWithErrors input,
+.fieldWithErrors textarea {
+	border:dashed 2px #99201C;
+}
