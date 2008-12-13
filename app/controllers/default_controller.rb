@@ -16,19 +16,16 @@ class DefaultController
 
 
 	def update_sass_stylesheets
-		unless defined?(@@SASS_LOADED)
-			@@SASS_LOADED = true
-
-			Sass::Plugin.options.merge!(:template_location  => Mack.paths.public('stylesheets') + '/sass',
-													:css_location       => Mack.paths.public('stylesheets'),
+		Sass::Plugin.options.merge!(:template_location  => Mack::Paths.public('stylesheets/sass'),
+													:css_location       => Mack::Paths.public('stylesheets'),
 													:always_check       => Mack.env != "production",
-													:full_exception     => Mack.env != "production")
-
-			if !Sass::Plugin.checked_for_updates ||
-					Sass::Plugin.options[:always_update] || Sass::Plugin.options[:always_check]
-				Sass::Plugin.update_stylesheets
-			end
+														:full_exception     => Mack.env != "production")
+		
+		if !Sass::Plugin.checked_for_updates ||
+				Sass::Plugin.options[:always_update] || Sass::Plugin.options[:always_check]
+			Sass::Plugin.update_stylesheets
 		end
+		return true
 	end
 
 end
