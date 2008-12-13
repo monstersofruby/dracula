@@ -4,7 +4,7 @@ Mack::Routes.build do |r|
     link.resource :comments
   end
   
-  r.home_page "/", :controller => :default, :action => :index
+  r.home_page "/", :controller => :links, :action => :index
   
   r.defaults
   
