@@ -44,7 +44,16 @@ class LinksController < DefaultController
   def vote
     @link = Link.get!(params[:id])
     @link.vote!
+    
+    case params[:format]
+    when "html"
+      redirect_to(links_index_url)
+    when "js"
+      render :partial => 
+    end
+
   rescue DataMapper::ObjectNotFoundError
+    redirect_to(links_index_url)
   ensure
     redirect_to(links_index_url)
   end
