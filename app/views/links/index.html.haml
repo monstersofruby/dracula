@@ -4,7 +4,7 @@
     %form{ :action => "/links/1/votes", :method => "post", :onsubmit => "new Ajax.Request('/links/1/votes', {asynchronous:true, evalScripts:true, method:'post', parameters:Form.serialize(this)}); return false;" }
       %div{ :style => "margin:0;padding:0" }
         %input{ :name => "authenticity_token", :type => "hidden", :value => "a3e56866b50b7addb3f81e3772b3af224671e452" }/
-      %input{ :type => "image", :src => "/images/vota.gif?1229182622" }/
+      %img{ :src => "/images/vota.gif?1229182622" }/
   .details
     %h2
       %a{ :href => "/links/1" }
