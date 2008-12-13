@@ -2,3 +2,4 @@
 /db/*.sql
 /log/*.log
 *.swp
+log/*

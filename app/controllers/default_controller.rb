@@ -11,12 +11,13 @@ class DefaultController
   # Note: You do not need to actually have an empty action like this defined for Mack to
   # find the view on disk. This is only included here for the sake of 'completeness'.
   def index
+    
   end
 
 
 	def update_sass_stylesheets
-		unless defined?(Sass::RAILS_LOADED)
-			Sass::MACK_LOADED = true
+		unless defined?(@@SASS_LOADED)
+			@@SASS_LOADED = true
 
 			Sass::Plugin.options.merge!(:template_location  => Mack.paths.public('stylesheets') + '/sass',
 													:css_location       => Mack.paths.public('stylesheets'),
