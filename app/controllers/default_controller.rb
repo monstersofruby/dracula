@@ -23,8 +23,8 @@ class DefaultController
 		
 		if !Sass::Plugin.checked_for_updates ||
 				Sass::Plugin.options[:always_update] || Sass::Plugin.options[:always_check]
+			Sass::Plugin.update_stylesheets
 		end
-		Sass::Plugin.update_stylesheets
 		return true
 	end
 
