@@ -27,3 +27,4 @@ configatron.default_secret_key = '6FGMXJHWL4ZLAY83TR7YQNA4K55Y7PLHPPT8EJN5GLLXXY
 # 1.  Uncomment the code below, and make sure that the framework is the one you want to use
 # 2.  run:  rake generate:javascript
 # configatron.mack.js_framework = 'jquery'
+
