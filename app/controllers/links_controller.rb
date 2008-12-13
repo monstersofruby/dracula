@@ -1,5 +1,4 @@
-class LinksController
-  include Mack::Controller
+class LinksController < DefaultController
   
   # '/'
   # Note: You do not need to actually have an empty action like this defined for Mack to
