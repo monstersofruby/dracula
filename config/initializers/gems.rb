@@ -7,7 +7,7 @@
 require_gems do |gem|
   gem.add "mack-data_mapper", :libs => "mack-data_mapper"
   gem.add "mack-haml", :libs => "mack-haml"
-  gem.add "rubygems"
+  
   gem.add "dm-core"
   
   # examples:
@@ -15,3 +15,5 @@ require_gems do |gem|
   # gem.add :termios
   # gem.add :rubyzip, :source => "http://gems.rubyforge.org"
 end
+
+require "rubygems"
