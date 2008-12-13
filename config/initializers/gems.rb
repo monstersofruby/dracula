@@ -15,4 +15,6 @@ require_gems do |gem|
   # gem.add :rubyzip, :source => "http://gems.rubyforge.org"
 end
 
-# require "rubygems"
+Mack::Rendering::Engine::Registry.instance.register(:partial, :haml)
+Mack::Rendering::Engine::Registry.instance.register(:layout, :haml)
+
