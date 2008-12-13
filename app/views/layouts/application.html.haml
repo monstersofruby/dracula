@@ -1,12 +1,21 @@
 !!!
 %html
   %head
+    %meta{ "http-equiv".to_sym => "Content-Type", :content => "text/html; charset=utf-8" }/
     %title
       Frankenstein Links
-    = stylesheet 'scaffold.css'
+    = stylesheet 'screen.css'
     = javascript 'reg.js'
   %body
-    #logo
-      %img{ :src => "/images/frankenstein.jpg", :alt => "Frankenstein" }/
-    #main
+    #header
+      %img{ :src => "/images/logo.png", :alt => "Dracula" }/
+      %h1
+        Frankenstein Links — Dracula Edition™
+      %span#navigation
+        %a{ :href => "/" }
+          Portada
+        |
+        %a{ :href => "/links/new"}
+          Añadir enlace
+    #wrapper
       = yield_to :view
