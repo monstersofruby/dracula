@@ -38,3 +38,19 @@ h1 {
 .link h2 {
   color: red;
 }
+form {
+  -webkit-border-radius: 5px;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #ccc;
+  display: block;
+}
+form label {
+  display: block;
+  margin: 1em 0;
+}
+form input,
+form textarea {
+  width: 99%;
+  font-size: 2em;
+}
