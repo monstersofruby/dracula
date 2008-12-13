@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title
+      Frankenstein Links
+    = stylesheet 'scaffold.css'
+    = javascript 'reg.js'
+  %body
+    #logo
+      %img{ :src => "/images/frankenstein.jpg", :alt => "Frankenstein" }/
+    #main
+      = yield_to :view
