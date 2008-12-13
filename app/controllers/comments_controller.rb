@@ -1,5 +1,4 @@
-class CommentsController
-  include Mack::Controller
+class CommentsController < DefaultController
   
   # '/'
   # Note: You do not need to actually have an empty action like this defined for Mack to
