@@ -1,0 +1,16 @@
+%p
+  = label_tag :title, @link.title
+%p
+  = label_tag :url, @link.url
+%p
+  = label_tag :description, @link.description
+
+- @link.comments.each do |comment|
+  .comment
+    .author= comment.author
+    .body= comment.body
+
+= render :partial, 'comments/form'
+
+/ = link_to "Edit", links_edit_url(:id => @link)
+= link_to "Back", links_index_url
